@@ -7,17 +7,16 @@
 
 ## 快速开始（Windows）
 
-首先，在系统中安装 [espeak-ng](https://github.com/espeak-ng/espeak-ng)：
+> 推荐使用 Python 3.9
 
-1. 下载 [espeak-ng-X64.msi]((https://github.com/espeak-ng/espeak-ng/releases/tag/1.51)) 并安装。
-2. 添加环境变量：C:\Program Files\eSpeak NG
-3. 执行 `espeak-ng -h` 检查是否安装成功。
+1、在系统中安装 [espeak-ng](https://github.com/espeak-ng/espeak-ng)：
 
-其次，安装 [TTS](https://github.com/coqui-ai/TTS)：
+- 下载 [espeak-ng-X64.msi]((https://github.com/espeak-ng/espeak-ng/releases/tag/1.51)) 并安装。
+- 添加环境变量：`C:\Program Files\eSpeak NG`
+- 执行 `espeak-ng -h` 检查是否安装成功。
 
-1. 需要 Python 3.9 环境。
-2. 执行 `pip install TTS`
+2、安装 [TTS](https://github.com/coqui-ai/TTS)：`pip install TTS`
 
-最后，录制/下载一段音频（用于声音模仿），命名为 `speaker.wav` 置于当前目录下。（或者就用项目中随便搞的这个）
+3、安装 [DISC-LawLLM](https://github.com/FudanDISC/DISC-LawLLM?tab=readme-ov-file#%E6%8E%A8%E7%90%86%E5%92%8C%E9%83%A8%E7%BD%B2) 所需依赖：`pip install -r requirements.txt`
 
-最后执行 `python demo.py`。程序将从网络下载模型文件（1.87G），并生成 `demo.wav` 文件。
+依赖全部安装完成后，执行 `python demo.py`，程序将会自动下载 LawLLM 参数（约 20G）和 TTS 参数（约 2G）。
